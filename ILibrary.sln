@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILibrary", "ILibrary.csproj", "{D5DF3A81-2FA4-47C8-8FE0-D4C526A50052}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ILibrary", "ILibrary.csproj", "{D5DF3A81-2FA4-47C8-8FE0-D4C526A50052}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBase", "..\DataBase\DataBase.csproj", "{006E3F42-D758-4884-8808-BE92D261B75C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D5DF3A81-2FA4-47C8-8FE0-D4C526A50052}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5DF3A81-2FA4-47C8-8FE0-D4C526A50052}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5DF3A81-2FA4-47C8-8FE0-D4C526A50052}.Release|Any CPU.Build.0 = Release|Any CPU
+		{006E3F42-D758-4884-8808-BE92D261B75C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{006E3F42-D758-4884-8808-BE92D261B75C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{006E3F42-D758-4884-8808-BE92D261B75C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{006E3F42-D758-4884-8808-BE92D261B75C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
