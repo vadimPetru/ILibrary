@@ -11,9 +11,59 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-           
-         
 
+
+            <ul>
+                <li><a href="#">Главаная</a></li>
+                <li><a href="#">Бронирование Книг</a></li>
+                <li><a href="#">Выдача Книг</a></li>
+                <li><a href="#">Список Книг</a></li>
+                <li><a href="#">Топ 100 книг</a></li>
+            </ul>
+
+            <style>
+                nav {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    min-height: 10vh;
+                    background-color: #067d7d;
+                }
+
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                li {
+                    display: block;
+                    padding: 0 20px;
+                    color: #fff;
+                    font-size: 25px;
+                    font-family: sans-serif;
+                    text-transform: uppercase;
+                    transition: .5s;
+                }
+
+                    li a {
+                        text-decoration: none;
+                        color: #fff;
+                        transition: .5s;
+                        padding: 10px;
+                    }
+
+                ul:hover li a {
+                    filter: blur(5px);
+                }
+
+                    ul:hover li a:hover {
+                        font-size: 30px;
+                        filter: blur(0px);
+                        background-color: #ede739;
+                    }
+
+            </style>
 
         </nav>
     </header>
