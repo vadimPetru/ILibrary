@@ -5,80 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ILibrary</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ILibrary.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://bootstraptema.ru/snippets/menu/2017/cdmenu/cdmenu.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://bootstraptema.ru/snippets/menu/2017/cdmenu/cdmenu.js"></script>
+    <script src="js/bootstrap.js"></script>
+
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+           <div class="user">
+               <a asp-controller="Registration" asp-action="FormRegistration"><img src="~/Pictures/user.jpg" alt="User" width="58" height="50"></a>
+           </div>
+           
+                <section class="cd-section">
+                    <button class="cd-bouncy-nav-trigger" href="#0">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </section>
 
-
-            <ul>
-                <li><a href="#">Главаная</a></li>
-                <li><a href="#">Бронирование Книг</a></li>
-                <li><a href="#">Выдача Книг</a></li>
-                <li><a href="#">Список Книг</a></li>
-                <li><a href="#">Топ 100 книг</a></li>
-            </ul>
-
-            <style>
-                nav {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    min-height: 10vh;
-                    background-color: #067d7d;
-                }
-
-                ul {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-
-                li {
-                    display: block;
-                    padding: 0 20px;
-                    color: #fff;
-                    font-size: 25px;
-                    font-family: sans-serif;
-                    text-transform: uppercase;
-                    transition: .5s;
-                }
-
-                    li a {
-                        text-decoration: none;
-                        color: #fff;
-                        transition: .5s;
-                        padding: 10px;
+                <style>
+                    .cd-section{
+                        top:17px;
                     }
-
-                ul:hover li a {
-                    filter: blur(5px);
-                }
-
-                    ul:hover li a:hover {
-                        font-size: 30px;
-                        filter: blur(0px);
-                        background-color: #ede739;
-                    }
-
-            </style>
-
+                </style>
+                <div class="cd-bouncy-nav-modal">
+                    <nav>
+                        <ul class="cd-bouncy-nav">
+                            <li><a asp-controller="Main" asp-action="MainContent">Homepage</a></li>
+                            <li><a asp-controller="Booking" asp-action="Form">Booking</a></li>
+                            <li><a asp-controller="Issuance"  asp-action="Form">Issuance</a></li>
+                            <li><a asp-controller="Gallery" asp-action="Carousel">Gallery</a></li>
+                            <li><a href="#team">Our Team</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
         </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+</header>
+<div class="container">
+    <main role="main" class="pb-3">
 
-    <footer class="border-top footer text-muted">
-       
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+            @RenderBody()
+    </main>
+</div>
+
+<footer class="border-top footer text-muted">
+</footer>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
